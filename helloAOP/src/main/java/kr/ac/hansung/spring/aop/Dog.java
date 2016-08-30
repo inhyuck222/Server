@@ -10,5 +10,4 @@ public class Dog implements AnimalType{
 	public void sound() {
 		System.out.println("Dog name = " + myName + " : " + "BowWow");
 	}
-
 }
