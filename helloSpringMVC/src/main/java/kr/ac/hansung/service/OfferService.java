@@ -20,7 +20,10 @@ public class OfferService {
 	}
 	
 	public List<Offer> getCurrent(){
-		
 		return offerDAO.getOffers();
-	}	
+	}
+	
+	public void insert(Offer offer){
+		offerDAO.insert(offer);		
+	}
 }

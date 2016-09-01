@@ -6,7 +6,7 @@
 <title>Home</title>
 </head>
 <body>
-	<p> <a href="/helloSpringMVC/offers">Show current offers</a>
-	<p> <a href="/helloSpringMVC/createOffer">Add a new offer</a>
+	<p> <a href="${pageContext.request.contextPath}/offers">Show current offers</a>
+	<p> <a href="${pageContext.request.contextPath}/createOffer">Add a new offer</a>
 </body>
 </html>

@@ -1,14 +1,25 @@
 package kr.ac.hansung.dao;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Offer {
-	
+
 	private int id;
+
+	@Size(min = 5, max = 100, message = "Name must be between 5 and 100 characters")
 	private String name;
+
+	@Email(message = "Please provide a valid email address")
+	@NotEmpty(message = "The email address cannot be empty")
 	private String email;
+
+	@Size(min = 5, max = 100, message = "Text must be between 5 and 100 characters")
 	private String text;
-	
-	public Offer(){
-		
+
+	public Offer() {
 	}
 
 	public Offer(String name, String email, String text) {
@@ -16,7 +27,7 @@ public class Offer {
 		this.email = email;
 		this.text = text;
 	}
-	
+
 	public Offer(int id, String name, String email, String text) {
 		this.id = id;
 		this.name = name;
@@ -60,5 +71,5 @@ public class Offer {
 	public String toString() {
 		return "Offer [id=" + id + ", name=" + name + ", email=" + email + ", text=" + text + "]";
 	}
-	
+
 }
