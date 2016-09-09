@@ -1,0 +1,24 @@
+package com.spring.book.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.spring.book.service.OfferService;
+
+@Controller
+public class OfferController {
+	
+	@Autowired
+	private OfferService offerService;
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Model model){
+		model.addAttribute("offers", offerService.getOfferList());
+		
+		return "home";		
+	}
+
+}
