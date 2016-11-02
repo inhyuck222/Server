@@ -14,7 +14,6 @@
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
             http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 
-
 	<context:component-scan base-package="com.spring.book" />
 	<util:properties id="jdbc" location="classpath:config/jdbc.properties" />
 

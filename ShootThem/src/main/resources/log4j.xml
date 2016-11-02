@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.spring.book">
+	<logger name="kr.co.shootthem">
 		<level value="info" />
 	</logger>
 	
